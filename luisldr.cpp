@@ -34,7 +34,7 @@ __declspec(naked) NTSTATUS ZwOpenFile(_Out_ PHANDLE FileHandle, _In_ ACCESS_MASK
         "lea edx, [esp+4]",
         "call dword [fs:0x00C0]",
         "add esp, byte +4",
-        "ret 0x0018"
+        "ret 0x0020"
     };
 }
 
