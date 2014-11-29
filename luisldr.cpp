@@ -155,7 +155,7 @@ NTSTATUS LoadPEFile(PUNICODE_STRING moduleName, PVOID* baseAddress) {
             }
             ZwClose(sectionHandle);
         }
-        ZwClose(sectionHandle;)
+        ZwClose(sectionHandle);
     }
     ZwTerminateProcess(ZwCurrentProcess(), result);
     return result;
