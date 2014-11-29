@@ -120,7 +120,7 @@ NTSTATUS LoadPEFile(PUNICODE_STRING moduleName, PVOID* baseAddress) {
     IO_STATUS_BLOCK IOResult;
     NTSTATUS result;
     
-    // Create a new OBJECT_ATTRIBUTES structure and initialize it.
+    // Create a new OBJECT_ATTRIBUTES structure and initialise it.
     OBJECT_ATTRIBUTES attributes;
     attributes->ObjectName = moduleName;
     attributes->Attributes = 1;
