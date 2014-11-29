@@ -144,7 +144,7 @@ NTSTATUS LoadPEFile(PUNICODE_STRING moduleName, PVOID* baseAddress) {
             result = ZwMapViewOfSection(sectionHandle, ZwCurrentProcess(), baseAddress, 0, 0x00100000, baseAddress, *size, 2, 0x0040);
             
             if (result == 0) {
-                int* pos;
+                int* pos = (int*)(baseAddress);
                 pos = (int*)(pos[15]);
                 pos = (int*)(pos[11]);
                 void(*exe)(int*) = (void*(int*))(pos);
